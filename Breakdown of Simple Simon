@@ -1,0 +1,41 @@
+Create your HTML markup and CSS to position your square or shape. These will be the colors that are randomly selected for the game.
+
+    colors: red, green, yellow, blue
+    shape: 4 squares(2 top, 2 bottom)
+
+challenge: build out your whole board using jquery/javascript
+
+    4 squares have same class
+    $('.square')
+
+Randomly select a square and fade that color in then out.
+
+    function randomNumber {
+      generate random number between 0 and 3 or 1 and 4
+      return number
+    }
+    function assignedSquare(randomNumber) {
+      get squares and find one matching randomNumber
+    }
+    function illuminateSquare (assignedSquare) {
+      animate square
+    }
+
+Allow the user to click on the square that was selected.
+
+    $('.square').click(function(){
+        illuminateSquare(this)
+    })
+Continue randomly selecting colored square/shapes adding the new random selection to be added to the previous selection.
+Eventually you will end up with a random sequence of selected colors.
+
+
+
+    you will need a sequence. what do we have that can hold a sequence?
+    look into setTimeout()
+Each time a new color is added to the sequence allow the user to enter (click) the sequence in the order as it was played.
+    you will need a way to check if the user click matches the sequence
+If the user continues to get the order correct then proceed to adding another color to the collection until the user gets the order incorrectly.
+    you will need to know when the user is done clicking to start computer turn again.  if user is wrong, game is over
+Keep track of how many rounds the user is able to go.
+    You will need some way to hold the rounds as well as someway to increase the number
