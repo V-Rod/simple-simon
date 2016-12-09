@@ -26,8 +26,11 @@ Allow the user to click on the square that was selected.
     $('.square').click(function(){
         illuminateSquare(this)
     })
+
 Continue randomly selecting colored square/shapes adding the new random selection to be added to the previous selection.
 Eventually you will end up with a random sequence of selected colors.
+
+
 
 
 
