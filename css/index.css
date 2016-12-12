@@ -14,6 +14,8 @@
 
 .wrapper {
     text-align: center;
+    width: 540px;
+    margin: 0 auto;
 }
 
 
@@ -58,10 +60,7 @@ p[data-action="lose"] {
     clear: both;
 }
 
-.wrapper {
-    width: 540px;
-    margin: 0 auto;
-}
+
 .kontainer {
     width: 305px;
 }

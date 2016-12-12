@@ -48,7 +48,7 @@
     }
 
     function deactivateSimonBoard() {
-        if (mode !== 'free-board') {
+        if (mode == 'normal') {
             $('.simon')
                 .off('click', '[data-tile]')
                 .off('mousedown', '[data-tile]')
