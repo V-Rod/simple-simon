@@ -66,8 +66,9 @@
         }
     }
 
-    //--------- the register click function where is shifting the user input to the copy array and comparing what was
-    //input by the user to the active tiles and checking if they are different.  If they are the user loses.
+    //--------- The "registerClick" function where is shifting the user input to the copy array and comparing what was
+    //input by the user to the active tiles and checking if they are different.  This function is constantly checking
+    // both arrays.
     function registerClick(e) {
         var desiredResponse = copy.shift();
         var actualResponse = $(e.target).data('tile');
@@ -75,7 +76,7 @@
         checkLose();
     }
 
-    // copy array will be empty when user has successfully completed sequence
+    //--------- copy array will be empty when user has successfully completed sequence
     function checkLose() {
 
         if (copy.length === 0 && active) {
@@ -88,7 +89,7 @@
         }
     }
 
-    // notify the user that they lost
+    //--------- notify the user that they lost
     function endGame() {
 
         $('p[data-action=lose]').show();
@@ -96,7 +97,7 @@
     }
 
 
-    /*----------------- Animate, light up and add sound to the board -------------------*/
+    //-------- Animate, light up and add sound to the board
 
     function animate(sequence) {
         var i = 0;
@@ -133,8 +134,9 @@
         }
     }
 
+    //--------- Random number generator between 1 and 4
     function randomNumber() {
-        // between 1 and 4
+
         return Math.floor((Math.random()*4)+1);
     }
 
