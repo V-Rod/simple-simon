@@ -136,14 +136,11 @@ p[data-action="lose"] {
     background: #78BCFF;
 }
 
-.game-options h2 {
+h2 {
     margin-top: 30px;
     margin-bottom: 0;
 }
 
-.game-options input[type="radio"] {
-    margin-right: 10px;
-}
 
 .hoverable:hover {
     cursor: pointer;
