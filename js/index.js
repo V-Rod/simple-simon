@@ -27,7 +27,7 @@
         newRound();
     }
 
-    //--------- this function will push the random number generated to the sequence array, will slice the sequence
+    //--------- This function will push the random number generated to the sequence array, will slice the sequence
     // index to the copy array and animate the computer generated sequence
     function newRound() {
         $('[data-round]').text(++round);
@@ -54,7 +54,7 @@
         $('[data-tile]').addClass('hoverable');
     }
 
-    //--------- here the board is deactivated on the DOM object and removing the class of hoverable
+    //--------- Here the board is deactivated on the DOM object and removing the class of hoverable
     function deactivateSimonBoard() {
         if (mode == 'normal') {
             $('.simon')
@@ -76,7 +76,7 @@
         checkLose();
     }
 
-    //--------- copy array will be empty when user has successfully completed sequence
+    //--------- Copy array will be empty when user has successfully completed sequence
     function checkLose() {
 
         if (copy.length === 0 && active) {
