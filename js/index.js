@@ -6,6 +6,13 @@ $(document).ready(function() {
     var round;
     var active = true;
 
+    //--------- Random number generator between 1 and 4
+
+    function randomNumber() {
+
+        return Math.floor((Math.random()*4)+1);
+    }
+
     //---------The game is ready to be initialized by calling the initSimon function
 
     function initSimon() {
@@ -133,12 +140,4 @@ $(document).ready(function() {
             audio.append('<source src="sounds/' + tile + '.mp3" type="audio/mp3" />');
             $('[data-action=sound]').html(audio);
         }
-
-
-    //--------- Random number generator between 1 and 4
-    function randomNumber() {
-
-        return Math.floor((Math.random()*4)+1);
-    }
-
 })();
