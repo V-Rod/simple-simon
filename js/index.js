@@ -83,7 +83,7 @@ $(document).ready(function() {
             deactivateSimonBoard();
             newRound();
 
-        } else if (!active) {                  // user lost
+        } else if (!active) {
             deactivateSimonBoard();
             endGame();
         }
@@ -100,6 +100,7 @@ $(document).ready(function() {
     //-------- Animate, light up and add sound to the board
 
     function animate(sequence) {
+
         var i = 0;
         var interval = setInterval(function() {
             playSound(sequence[i]);
