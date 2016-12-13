@@ -1,22 +1,18 @@
-(function() {
+$(document).ready(function() {
     'use strict';
 
     var sequence;
     var copy;
     var round;
     var active = true;
-    //var mode = 'normal';
 
     //---------The game is ready to be initialized by calling the initSimon function
-
-    //$(document).ready(function() {
-        initSimon();
-    //});
 
     function initSimon() {
         $('[data-action=start]').on('click', startGame);
 
     }
+    initSimon();
 
     //--------- This function starts the game by creating empty arrays for the computer generated sequence and the user sequence
     function startGame() {
@@ -38,6 +34,7 @@
 
     //--------- Here, the board will be active and listening and running the registering function for the mouse clicks
     // and the behaviors assigned adding classes to the tiles and removing such classes on mouse specific behaviors
+
     function activateSimonBoard(){
         $('.simon')
             .on('click', '[data-tile]', registerClick)
@@ -55,20 +52,22 @@
     }
 
     //--------- Here the board is deactivated on the DOM object and removing the class of hoverable
+
     function deactivateSimonBoard() {
-        //if (mode == 'normal') {
+
             $('.simon')
                 .off('click', '[data-tile]')
                 .off('mousedown', '[data-tile]')
                 .off('mouseup', '[data-tile]');
 
             $('[data-tile]').removeClass('hoverable');
-        //}
+
     }
 
     //--------- The "registerClick" function where is shifting the user input to the copy array and comparing what was
     //input by the user to the active tiles and checking if they are different.  This function is constantly checking
     // both arrays.
+
     function registerClick(e) {
         var desiredResponse = copy.shift();
         var actualResponse = $(e.target).data('tile');
@@ -77,13 +76,14 @@
     }
 
     //--------- Copy array will be empty when user has successfully completed sequence
+
     function checkLose() {
 
         if (copy.length === 0 && active) {
             deactivateSimonBoard();
             newRound();
 
-        } else if (!active) { // user lost
+        } else if (!active) {                  // user lost
             deactivateSimonBoard();
             endGame();
         }
@@ -114,7 +114,7 @@
     }
 
     function lightUp(tile) {
-        //if (mode == 'normal') {
+
             $('[data-tile=' + tile + ']').animate({
                 opacity: 1
             }, 250, function() {
@@ -123,16 +123,16 @@
                 }, 250);
             });
         }
-    //}
+
 
     function playSound(tile) {
-        //if (mode == 'normal') {
+
             var audio = $('<audio autoplay></audio>');
             audio.append('<source src="sounds/' + tile + '.ogg" type="audio/ogg" />');
             audio.append('<source src="sounds/' + tile + '.mp3" type="audio/mp3" />');
             $('[data-action=sound]').html(audio);
         }
-    //}
+
 
     //--------- Random number generator between 1 and 4
     function randomNumber() {
