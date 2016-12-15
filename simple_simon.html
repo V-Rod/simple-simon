@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Simple Simon</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet"> <!--Fonts for the web page -->
+    <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+    <link rel="stylesheet" href="css/simple_simon.css">
+
+</head>
+<body>
+    <div class="flex">
+        <header>
+            <h1>
+                simple simon game
+            </h1>
+
+        </header>
+    </div>
+
+    <div class="kontainer wrapper">
+        <h1>Simon Says</h1>
+            <div class="game-board">
+                <div class="simon">
+                    <ul>
+                        <li class="tile red" data-tile="1"></li>
+                        <li class="tile blue" data-tile="2"></li>
+                        <li class="tile yellow" data-tile="3"></li>
+                        <li class="tile green" data-tile="4"></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="game-info">
+                <h2>Round: <span data-round="0">0</span></h2>
+                <button data-action="start" >Start</button>
+                <p data-action="lose">Sorry, you lost after <span data-round="0"></span> rounds!</p>
+            </div>
+            <div data-action="sound"></div>
+    </div>
+
+</body>
+<script
+        src="https://code.jquery.com/jquery-2.2.4.js"
+        integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+        crossorigin="anonymous"></script>
+<script src="js/simple_simon.js"></script>
+</html>
