@@ -58,7 +58,8 @@ $(document).ready(function() {
         $('[data-tile]').addClass('hoverable');
     }
 
-    //--------- Here the board is deactivated on the DOM object and removing the class of hoverable
+    //--------- Here the board is deactivated on the DOM object and removing the class of hoverable so the user cannot
+    // interfere with the computer sequence until finished
 
     function deactivateSimonBoard() {
 
@@ -96,7 +97,7 @@ $(document).ready(function() {
         }
     }
 
-    //--------- notify the user that they lost
+    //--------- The function will notify the user that they lost
     function endGame() {
 
         $('p[data-action=lose]').show();
